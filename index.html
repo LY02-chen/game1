@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game1</title>
+
+    <script defer src="js/constants.js"></script>
+    <script defer src="js/draw.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/keyEvent.js"></script>
+    <script defer src="js/changeSetting.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body onselectstart="return false;" oncontextmenu="return false;">
+    <div style="display: inline;">
+        <div id="gamesetting" style="text-align: center;">
+            <ul>
+                <p>
+                    Column : <input type="text" id="col" value="15" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+                    Row : <input type="text" id="row" value="15" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+                    Special color per length : <input type="text" id="splen" value="5" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+                    Initial Speed : <input type="text" id="initspeed" value="8" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+                    Add speed per length : <input type="text" id="addspeed" value="5" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+                    <input type="button" id="applysetting" value="Apply setting">
+                </p>
+                <p>
+                    Background : <input type="color" id="background" value="#ceffce">
+                    Eyes : <input type="color" id="eye" value="#ffffff">
+                    Pupil : <input type="color" id="pupil" value="#000000">
+                    Head : <input type="color" id="head" value="#ffa042">
+                    Body normal : <input type="color" id="bodynormal" value="#00bb00">
+                    Body special : <input type="color" id="bodyspecial" value="#ffa042">
+                    <input type="button" id="applycolor" value="Apply color">
+                </p>
+            </ul>
+        </div>
+        <div align="center">
+            <canvas id="gamecanvas"></canvas>
+            <div id="statusbarhold" style="background: #d0d0d0; text-align: left; font-size: 20px;"></div>
+        </div>
+    </div>
+</body>
+</html>
