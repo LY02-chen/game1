@@ -1,6 +1,6 @@
 const canvas = document.getElementById("gamecanvas"),
       ctx = canvas.getContext("2d"),
-      statusbar = document.getElementById("statusbarhold");;
+      statusbar = document.getElementById("statusbarhold");
 
 ctx.strokeStyle = "black";
 
